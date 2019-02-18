@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo de calculadora</title>
+	<script type="text/javascript" src="calculadora.js">
+		
+	</script>
+</head>
+<body>
+
+<p align="center"><b>CALCULADORA SERGIO ROJAS ROJAS<p>
+
+<center>
+<div style="float:none; padding:1em; width:22%; background-color:#BDBDBD; border-radius:15px; box-shadow: 10px 10px 3px #888888;">
+<FORM NAME="micalc">
+<table>
+ <tr>
+<INPUT TYPE="text" NAME="meterdatos"  SIZE="28" MAXLENGTH="30" >
+</tr>
+</table>
+<hr><!------------------------------------------------------------------------------------------------------>
+<table >
+<tr>
+<INPUT TYPE="button" VALUE="  1  "  onClick="num(1)"> 
+<INPUT TYPE="button" VALUE="  2  "  onClick="num(2)"> 
+<INPUT TYPE="button" VALUE="  3  "  onClick="num(3)">
+<INPUT TYPE="button" VALUE="  +  "  onClick="signo('+')" >
+<INPUT TYPE="button" VALUE="  C  "  onClick="document.micalc.meterdatos.value = ''; " >
+</tr>
+
+<hr><!------------------------------------------------------------------------------------------------------>
+
+<tr>
+<INPUT TYPE="button" VALUE="  4  "  onClick="num(4)">
+<INPUT TYPE="button" VALUE="  5  "  onClick="num(5)"> 
+<INPUT TYPE="button" VALUE="  6  "  onClick="num(6)">
+<INPUT TYPE="button" VALUE="   -  "  onClick="signo('-')" >
+<INPUT TYPE="button" VALUE=" <---"  onClick="eliminar()">
+</tr>
+
+<hr><!------------------------------------------------------------------------------------------------------>
+
+<tr>
+<INPUT TYPE="button" VALUE="  7  "  onClick="num(7)"> 
+<INPUT TYPE="button" VALUE="  8  "  onClick="num(8)"> 
+<INPUT TYPE="button" VALUE="  9  "  onClick="num(9)">
+<INPUT TYPE="button" VALUE="  x  "  onClick="signo('*')" >
+<INPUT TYPE="button" VALUE="  %  "  onClick="porcent()">
+</tr>
+
+<hr><!------------------------------------------------------------------------------------------------------>
+<tr>
+<INPUT TYPE="button" VALUE="  0  "       onClick="num(0)">
+<INPUT TYPE="button" VALUE="  .  "      onClick="signo('.')">
+<INPUT TYPE="button" VALUE=" Pi  "       onClick="pi()">
+<INPUT TYPE="button" VALUE="  /   "      onClick="signo('/')" >
+<INPUT TYPE="button" VALUE="  &#8730   " onClick="raiz()" >
+</tr>
+<hr><!------------------------------------------------------------------------------------------------------>
+<tr>
+<INPUT TYPE="button" VALUE="  (   "           onClick="signo('(')">
+<INPUT TYPE="button" VALUE="  )  "            onClick="signo(')')">
+<INPUT TYPE="button" VALUE="1/x "             onClick="derivada()">
+<INPUT TYPE="button" VALUE="  ^   "           onClick="potencia()" >
+<INPUT TYPE="button" VALUE="  x&sup2  "       onClick="cuadrado()"> 
+</tr>
+<hr><!------------------------------------------------------------------------------------------------------>
+<tr>
+<INPUT TYPE="button" VALUE=" Sen  "         onClick="sen()" >
+<INPUT TYPE="button" VALUE=" Cos  "         onClick="cos()" >
+<INPUT TYPE="button" VALUE=" Tan   "          onClick="tan()" >
+ <INPUT TYPE="button" VALUE="  x&sup3  "       onClick="cubo()"> 
+</tr>
+<hr><!------------------------------------------------------------------------------------------------------>
+<tr>
+<INPUT TYPE="button" VALUE="                       =                       "   onClick="Calcular()" >
+</tr>
+</table>
+
+</FORM>
+</div>
+</center>
+
+
+</body>
+</html>

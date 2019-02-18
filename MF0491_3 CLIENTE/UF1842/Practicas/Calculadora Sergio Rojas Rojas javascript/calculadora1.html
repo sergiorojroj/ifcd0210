@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Calculadora Sergio Rojas Rojas</title>
+	<style type="text/css">
+
+body {
+font-family: helvetica, "bitstream Sans-Serif", "Dejavu Sans",Arial;
+padding-left: 10em;
+}
+
+h1 {
+color: #6AAF22}
+
+#calculadora {
+position: absolute;
+top: 6em;
+left: 8em;
+background-color: #f2f2f2;
+border-bottom: 8px solid black;
+border-right: 6px solid black;}
+
+input[type="button"] { 
+width: 7em;
+height: 5em;
+text-align: center}
+
+input[value="limpiar"],
+input[value="retroceso"]  { 
+width: 14em;}
+
+#resultado {
+text-align: right;
+float: right;
+width:100%;
+height: 70px;
+background-color: #C4EC9C;
+font-size: 20px;
+color:blue;
+}
+
+
+</style>
+<script type="text/javascript" src="calculadora1.js">
+		
+	</script>
+
+</head>
+<body>
+	
+<hr>
+
+<form name="form1">
+     <input name="entrada">
+     <input type="button" onclick="myfunction(form1.entrada.value)"value=" Nombre ">
+ </form>
+
+<form action="calc.htm">
+
+
+<table id="calculadora">
+   <tr>
+     <td colspan="4"><input type="text" id="resultado" size="10" ></td>
+   </tr>
+   <tr>
+     <td colspan="2"><input type="button" value="limpiar" onclick="opera(this.value)"></td>
+     <td colspan="2"><input type="button" value="retroceso" onclick="opera(this.value)"></td>
+   </tr>   
+   <tr>
+      <td><input type="button" value="7" onclick="opera(this.value)"></td>
+      <td><input type="button" value="8" onclick="opera(this.value)"></td>
+      <td><input type="button" value="9" onclick="opera(this.value)"></td>
+      <td><input type="button" value="/" onclick="opera(this.value)"></td>      
+   </tr>
+   <tr>
+      <td><input type="button" value="4" onclick="opera(this.value)"></td>
+      <td><input type="button" value="5" onclick="opera(this.value)"></td>
+      <td><input type="button" value="6" onclick="opera(this.value)"></td>
+      <td><input type="button" value="*" onclick="opera(this.value)"></td>      
+   </tr>
+
+   <tr>
+      <td><input type="button" value="1" onclick="opera(this.value)"></td>
+      <td><input type="button" value="2" onclick="opera(this.value)"></td>
+      <td><input type="button" value="3" onclick="opera(this.value)"></td>
+      <td><input type="button" value="-" onclick="opera(this.value)"></td>      
+   </tr>
+
+   <tr>
+      <td><input type="button" value="0" onclick="opera(this.value)"></td>
+      <td><input type="button" value="." onclick="opera(this.value)"></td>
+      <td><input type="button" value="=" onclick="opera(this.value)"></td>
+      <td><input type="button" value="+" onclick="opera(this.value)"></td>      
+   </tr>
+</table>
+</form>
+
+<div class="marca">
+	
+	
+
+</div>
+
+
+</body>
+</html>
