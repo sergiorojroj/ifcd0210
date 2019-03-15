@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Biblioteca_Uml">
+  <ClassDiagramComponents>
+    <Class name="Biblioteca" package="" visibility="public" xPosition="271.0" yPosition="31.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="CargarMateriales" returnType="void" visibility="public"/>
+        <Method name="CargarPersonas" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Material" package="" visibility="public" xPosition="35.0" yPosition="127.0">
+      <Fields>
+        <Field name="tipoMaterial" type="String" visibility="private"/>
+        <Field name="codigo" type="String" visibility="private"/>
+        <Field name="autor" type="String" visibility="private"/>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="anio" type="Integer" visibility="private"/>
+        <Field name="estadoLibro" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="altaMaterial" returnType="void" visibility="public"/>
+        <Method name="bajaMaterial" returnType="void" visibility="public"/>
+        <Method name="cambioMaterial" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Prestamo" package="" visibility="public" xPosition="271.0" yPosition="203.0">
+      <Fields>
+        <Field name="codigo" type="String" visibility="private"/>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="fechaSalida" type="String" visibility="private"/>
+        <Field name="fechaRegreso" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="cuota" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="547.0" yPosition="127.0">
+      <Fields>
+        <Field name="tipoPersona" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="correo" type="String" visibility="private"/>
+        <Field name="telefono" type="Integer" visibility="private"/>
+        <Field name="numeroLibros" type="Integer" visibility="private"/>
+        <Field name="recargo" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="llevarMaterial" returnType="void" visibility="public"/>
+        <Method name="dejarMaterial" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Libro" package="" visibility="public" xPosition="7.0" yPosition="430.0">
+      <Fields>
+        <Field name="editorial" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="altaMaterial" returnType="void" visibility="public"/>
+        <Method name="bajaMaterial" returnType="void" visibility="public"/>
+        <Method name="cambioMaterial" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Revista" package="" visibility="public" xPosition="193.0" yPosition="434.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="altaMaterial" returnType="void" visibility="public"/>
+        <Method name="bajaMaterial" returnType="void" visibility="public"/>
+        <Method name="cambioMaterial" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Alumno" package="" visibility="public" xPosition="369.0" yPosition="434.0">
+      <Fields>
+        <Field name="matricula" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="llevarMaterial" returnType="void" visibility="public"/>
+        <Method name="dejarMaterial" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="profesor" package="" visibility="public" xPosition="547.0" yPosition="434.0">
+      <Fields>
+        <Field name="numEmpleado" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="llevarMaterial" returnType="void" visibility="public"/>
+        <Method name="dejarMaterial" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="material" source="Biblioteca" target="Material" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <IsRelation name="is" source="profesor" target="Persona"/>
+    <HasRelation name="prestamopersona" source="Prestamo" target="Persona" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Libro" target="Material"/>
+    <IsRelation name="is" source="Revista" target="Material"/>
+    <IsRelation name="is" source="Alumno" target="Persona"/>
+    <HasRelation name="persona" source="Biblioteca" target="Persona" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="materialprestamo" source="Material" target="Prestamo" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
